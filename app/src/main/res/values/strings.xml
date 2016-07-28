@@ -4,4 +4,7 @@
     <string name="edit_message">Enter at your own doom</string>
     <string name="button_send">Send it</string>
     <string name="title_activity_display_message">MyMessage</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
