@@ -10,6 +10,8 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class MyActivity extends AppCompatActivity {
     public final static String EXTRA_MESSAGE = "com.bearnos.mysecondapp.MESSAGE";
@@ -61,5 +63,22 @@ public class MyActivity extends AppCompatActivity {
         String message = editText.getText().toString();
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
+        //addEntry(message);
+    }
+
+    public void addEntry(String str){
+        //want to take in what the user wrote, then put it into a textview below the entry spot
+
+        //need to get a refrence to the vertical layout
+        LinearLayout linearLayout = (LinearLayout)findViewById(R.id.scrollMe);
+        //need to instantiate a textview, ideally a predefined one
+        TextView textView = new TextView(this);
+        textView.setTextSize(30);
+        textView.setText(str);
+        linearLayout.addView(textView);
+
+
+        //need to store the text view grouping, or something else so that it is retained between
+        //uses and between screen orientation flips
     }
 }
